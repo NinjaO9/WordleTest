@@ -21,13 +21,13 @@ def checkvalidity(guess: str) -> bool:
 for i in range(attempt_num):
     index = 0
     obtained = ["_","_","_","_","_"]
+    
     while True:
         guess = str(input(f"\n {i + 1}/{attempt_num}: ")).strip().lower()
         if not checkvalidity(guess):
             print(f"Invalid Word! \n{message}")
         else:
             break
-
     
     for letter in list(guess.lower()):
         if letter in list(word):
@@ -35,7 +35,7 @@ for i in range(attempt_num):
         if letter == word[index]:
             obtained[index] = letter.upper()
         index += 1
-    
+
     for item in obtained:
         print(item, end="")
 
@@ -43,6 +43,5 @@ for i in range(attempt_num):
         print(f"\n Word guessed! \n'{word}'")
         break
 
-
 else:
-    print(f"\n Too bad! \n The word was: '{word}'")
+    print(f"\n Too bad! \n The word was: '{word}'")h
