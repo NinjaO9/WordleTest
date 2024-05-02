@@ -44,4 +44,4 @@ for i in range(attempt_num):
         break
 
 else:
-    print(f"\n Too bad! \n The word was: '{word}'")h
+    print(f"\n Too bad! \n The word was: '{word}'")
